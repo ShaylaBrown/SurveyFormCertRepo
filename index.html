@@ -5,15 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <h1 id="title">Client Survey Form</h1>
     <p id="description">Fill in the information below</p>
     <form id="survey-form">
-        <label id="name-label">Name<input required id="name" type="text"></label>
-        <label id="email-label">Email<input type="email" required id="email"></label>
-        <label id="number-label">Number<input id="number" type="numbers" pattern="662-418-3648" min="0" max-length="10"></label>
+        <label id="name-label">Name<input required placeholder="Sabrina Smith" id="name" type="text"></label>
+        <label id="email-label">Email<input placeholder="email@platform.com" type="email" required id="email"></label>
+        <label id="number-label" type="number">Phone Number<input placeholder="123-456-7890" id="number" type="numbers"
+                pattern="662-418-3648" min="10" max-length="10"></label>
+        <label id="satisfaction-label">I enjoyed services<select id="dropdown">
+                <option value="">(select one)</option>
+                <option value="2">True</option>
+                <option value="3">False</option>
+            </select></label>
+        <label id="recommendation">I would recommend to a friend (select one)
+            Yes<input value="radio" checked name="recommendation" type="radio">
+            No<input value="radio" name="recommendation" type="radio">
+        </label>
+        <label id="experience">What was your favorite part of the experience? (select all that apply)
+            <input name="experience" value="checkbox" type="checkbox">Class
+            <input name="experience" value="checkbox" type="checkbox">Homework<input name="experience" value="checkbox" type="checkbox">
+            Partner Support Games<input names="experience" value="checkbox" type="checkbox">
+        </label>
+
+        <label id="suggestions">What do you think worked well and what could we do to improve?
+<textarea placeholder="More healthy food would be better...etc."  id="suggestions"></textarea>
+        </label>
+        <button id="submit">Submit</button>
     </form>
 </body>
 
