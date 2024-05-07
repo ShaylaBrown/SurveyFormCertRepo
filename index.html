@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
 </head>
+
 <body>
     <h1 id="title">Client Survey Form</h1>
     <p id="description">Fill in the information below</p>
     <form id="survey-form">
-        Name<input required id="name" type="text">
-        Email<input pattern="email@abc.com" required id="email">
-        
+        <label id="name-label">Name<input required id="name" type="text"></label>
+        <label id="email-label">Email<input type="email" required id="email"></label>
+        <label id="number-label">Number<input id="number" type="numbers" pattern="662-418-3648" min="0" max-length="10"></label>
     </form>
 </body>
+
 </html>
